@@ -15,6 +15,7 @@ func init() {
 // If required variable not found will return empty value
 func GetVar(v string) (string, error) {
 	result, exists := os.LookupEnv(v)
+
 	if !exists {
 		return "", fmt.Errorf("Env variable not found %s", v)
 	}
